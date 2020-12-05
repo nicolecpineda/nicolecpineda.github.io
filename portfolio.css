@@ -1,0 +1,477 @@
+body {
+    background-color: #E7E5E6;
+    margin: 0 auto;
+    overflow: hidden;
+    font-family: 'Raleway', sans-serif;
+}
+
+.background {
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    overflow: hidden;
+}
+
+.background-img {
+    width: 110%;
+    margin-left: -0.5%;
+    bottom: -10px !important;
+    position: absolute;
+    z-index: -1;
+}
+
+.content {
+    width: 100%;
+    position: absolute;
+    z-index: 1;
+    color: #444444;
+    height: 85vh;
+    margin-top: 30px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.nav-content {
+    text-align: center;
+    position: fixed;
+    width: 29%;
+}
+
+.name-title {
+    font-size: 56px;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    line-height: 60px;
+    font-weight: 400;
+}
+
+.name-subtitle {
+    font-style: italic;
+    font-size: 15px;
+    font-weight: 300;
+    width: 60%;
+    margin: 2vh auto 4vh 20%;
+}
+
+.nav-list {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    padding-top: 12px;
+    background-color: rgba(68, 68, 68, 0.2)
+}
+
+.li1, .li2, .li3, .li4 {
+    font-weight: bold;
+    margin-bottom: 12px;
+    font-size: 18px;
+    display: inline-block;
+}
+
+.li1::after , .li2::after , .li3::after , .li4::after {
+    content: '';
+    display: block;
+    border-bottom: 1px solid #d88406;
+    transform: scaleX(0);  
+    transition: transform 0.3s ease-in-out;
+}
+.li1:hover::after, .li2:hover::after, .li3:hover::after, .li4:hover::after {transform: scaleX(1.2);}
+
+.projects-content {
+    width: 95%;
+    margin-left: 5%;
+    padding-bottom: 100px;
+}
+
+.about-title, .projects-title, .resume-title, .contact-title {
+    font-size: 35px;
+    font-weight: 400;
+}
+
+.projects-img {
+    width: 321px;
+    height: 222px;
+    transition-duration: 0.5s;
+}
+
+.projects-img:hover {
+    transform: scale(1.1, 1.1);
+    transition-duration: 0.5s;
+}
+
+.projects1, .projects2 {
+    margin-top: 30px;
+    width: 85%;
+    margin-left: 2%;
+}
+
+.projects2 { margin-top: 50px; }
+
+#bwog, #tugalleton, #filler, #cookingcalc { 
+    width: 63%;
+    margin-left: 3.6%;
+    position: absolute;
+    z-index: 2;
+    top: 60px;
+    transform: scale(0,0);
+    transition-duration: 1s;
+    padding-bottom: 10px;
+}
+#bwog.visible, #tugalleton.visible, #filler.visible, #cookingcalc.visible {
+    transform: scale(1);
+    opacity: 1;
+    transform-origin: top left;
+    transition-duration: 0.5s;
+    visibility: visible;
+}
+#bwog.hidden, #tugalleton.hidden, #filler.hidden, #cookingcalc.hidden {
+    transform: scale(0.5);
+    opacity: 0;
+    transform-origin: top left;
+    transition-duration: 0.5s;
+    visibility: hidden;
+}
+
+#tugalleton.visible { transform-origin: bottom right;}
+#tugalleton.hidden {transform-origin: bottom right;}
+
+#filler.visible { transform-origin: top right;}
+#filler.hidden {transform-origin: top right;}
+
+#cookincalc.visible { transform-origin: bottom left;}
+#cookingcalc.hidden {transform-origin: bottom left;}
+
+.p-img {width: 100%;}
+
+.p-title {
+    font-weight: 600;
+    font-size: 26px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.bi-link-45deg {
+    margin-top: 18px;
+    margin-left: 10px;
+}
+
+.svg-link {
+    fill: #444444;
+    transition: fill 0.3s
+}
+.svg-link:hover {
+    fill: #d88406;
+    transition: fill 0.3s
+}
+
+.p-description {
+    font-weight: 300;
+    font-size: 17px;
+    line-height: 30px;
+}
+
+.p-icons { margin-top: 10px; }
+
+.p-icons .col-sm-2 {
+    padding-left: 0;
+    padding-right: 0;
+    justify-content: center;
+}
+
+.icon { width: 70%;}
+.crop {border-radius: 200px;}
+
+.icon-hover {
+    opacity: 0;
+    font-size: 15px;
+    width: 70%;
+    height: 100%;
+    color: white;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    background-color: rgba(122, 122, 122, 0.9);
+    border-radius: 100px;
+    z-index: 3;
+    position: absolute;
+    bottom: 0;
+}
+
+.long {
+    font-size: 13px;
+}
+
+.resume-content, .contact-content {
+    padding-top: 60px;
+    width: 95%;
+    margin-left: 5%;
+}
+
+.about-content {
+    width: 95%;
+    margin-left: 5%;
+}
+
+.about-info, .resume-info, .contact-info{
+    margin-top: 20px;
+    width: 82%;
+    margin-left: 2%;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 30px;
+}
+
+.about-info {
+    font-size: 18px;
+    line-height: 25px;
+}
+.about-info ul{padding-bottom: 0px;}
+.about-info strong{font-weight: 500;}
+
+.link {
+    font-weight: 600;
+    color: #d88406;
+    border-bottom: 1px solid transparent;
+    transition: border-bottom 0.3s ease;
+}
+
+.link:hover {
+    color: #d88406;
+    text-decoration: none;
+    border-bottom: 1px solid #d88406;
+    transition: border-bottom 0.3s ease;
+}
+
+.contact-info span{padding-top: 20px;}
+
+.contact-form {
+    margin-left: 2%;
+    margin-top: 20px;
+    width: 60%;
+    margin-left: 10%;
+    padding-bottom: 33px;
+}
+
+.contact-form label {
+    margin-bottom: 4px;
+    font-weight: 500;
+}
+
+.contact-form input, .contact-form textarea {
+    margin-bottom: 5px;
+    border: 1px solid silver;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+#fmsg, #fsubject, #fname, #femail {width: 100%;}
+
+#fmsg {height: 150px;}
+
+.contact-submit {
+    background-color: transparent;
+    padding: 5px 12px 5px 12px;
+    border: 1px solid darkgrey;
+    border-radius: 7px;
+    transition: background-color 0.3s;
+    display: inline-block;
+}
+
+.contact-submit:hover {
+    background-color: lightgrey;
+    transition: background-color 0.3s;
+}
+
+.submit-msg {
+    display: inline-block;
+    margin-left: 10px;
+    color: #d88406;
+}
+
+.carousel-control-prev-icon {
+    background-image:url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23444444' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E");
+    margin-left: -160px;
+}
+
+.carousel-control-next-icon {
+    background-image:url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23444444' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E");
+    margin-right: -160px;
+}
+
+.carousel-indicators {margin-bottom: 0;}
+
+.carousel-indicators li{background-color: #444444;}
+
+@media (min-width: 992px) and (max-width: 1200px) and (max-height: 725px) {.background-img {bottom: initial !important; margin-top: -15%;}}
+@media (min-width: 1200px) and (max-height: 725px) {.background-img {bottom: initial !important; margin-top: -12%;}}
+@media (min-width: 1340px) and (max-height: 725px) {
+    .background-img {bottom: initial !important; margin-top: -15%;}
+    .name-subtitle {margin-bottom: 20px;}
+}
+@media all and (min-height: 800px) {
+    .content {height: 87vh;}
+    .li1, .li2, .li3, .li4 {margin-bottom: 20px;}
+    .projects2 { margin-top: 80px; }
+}
+@media (min-width: 1600px) and (max-height: 830px) {.background-img {bottom: initial !important; margin-top: -15%;}}
+@media (min-width: 1200px) and (min-height: 870px) {.background-img {width: 140%; margin-left: -5%;}}
+@media (min-width: 1500px) and (min-height: 870px) {.background-img {width: 130%; margin-left: -3%;}}
+@media (min-width: 1200px) and (max-width: 1500px) and(min-height: 1020px) {.background-img {width: 160%; margin-left: -7.5%;}}
+@media (min-width: 1200px) and (max-width: 1500px) and (min-height: 1100px) {
+    .background {display: flex; justify-content: center; align-items: center;} 
+    .content {width: 1200px; height: 710px; margin-top: -100px !important;}
+    .background-img {width: 2380px; margin-left: -60px; top: 0px;}
+}
+@media (min-width: 1200px) and (max-width: 1500px) and (min-height: 1160px) {.background-img {top: 40px;}}
+@media (min-width: 1200px) and (max-width: 1500px) and (min-height: 1250px) {.background-img {top: 80px;}}
+@media (min-width: 1200px) and (max-width: 1500px) and (min-height: 1350px) {.background-img {top: 150px;}}
+@media (min-width: 1380px) and (max-width: 1500px) and (min-height: 1100px) {.nav-content {width: 25%;}}
+@media (min-width: 1600px) and (max-width: 1500px) and (min-height: 1020px) {.background-img {width: 140%; margin-left: -5%;}}
+@media (min-width: 1700px) and (min-height: 1020px) {
+    .background-img {width: 2380px; margin-left: -76px;}
+    .name-title {font-size: 60px; letter-spacing: 7px; line-height: 70px;}
+    .name-subtitle {font-size: 20px;}
+    .li1, .li2, .li3, .li4 {font-size: 22px;}
+    .about-title, .projects-title, .resume-title, .contact-title {font-size: 40px;}
+    .content{margin-top: 40px; height: 86vh;}
+    .projects-img {width: 340px; height: auto;}
+    #bwog, #tugalleton, #filler, #cookingcalc {width: 68%; margin-left: 7.5%; top: 90px;}
+    .p-title {font-size: 30px;}
+    .p-description {font-size: 21px; line-height: 34px;}
+    .icon-hover, .long {font-size: 17px;}
+    .bi-link-45deg{width: 1.9em; height: 1.9em;}
+    .about-info, .resume-info, .contact-info{margin-top: 15px; font-size: 21px; line-height: 30px;}
+    #fmsg, #fsubject, #fname, #femail, .contact-form label, .contact-submit{font-size: 21px;}
+}
+@media (min-width: 1800px){
+    .background {display: flex; justify-content: center; align-items: center;} 
+    .content {width: 1800px; height: 84vh; margin-top: 0px !important;}
+    .nav-content{width: 630px;}
+    .background-img {width: 3400px; top: -260px;}
+}
+@media (min-width: 1800px) and (max-height: 830px) {.background-img {bottom: initial !important; margin-top: -100px;}}
+@media (min-width: 1800px) and (min-height: 1100px) {
+    .background {display: flex; justify-content: center; align-items: center;} 
+    .content {width: 1800px; height: 936px; margin-top: -100px !important;}
+    .nav-content{width: 630px;}
+    .background-img {width: 3400px; top: -220px;}
+}
+@media (min-width: 1800px) and (min-height: 1300px) {.background-img {top: -160px;}}
+@media (min-width: 1800px) and (min-height: 1400px) {.background-img {top: -130px;}}
+@media (max-height: 870px) and (max-width: 1340px) {
+    .background-img {margin-left: -5px; width: 1474px;}
+    .nav-content {width: 32%;}
+    .projects1, .projects2 { margin-top: 30px; width: 90%; margin-left: 0%; }
+    #bwog, #tugalleton, #filler, #cookingcalc { width: 68%; }
+}
+@media (max-height: 870px) and (max-width: 1200px) {
+    .nav-content {width: 25%;}
+    .background-img {margin-left: -70px;}
+    .name-title {font-size: 47px; letter-spacing: 3px;}
+    .name-subtitle {width: 90%; margin-left: 5%;}
+    #bwog, #tugalleton, #filler, #cookingcalc { margin-left: 8%; }
+    .about-title, .projects-title, .resume-title, .contact-title {font-size: 30px;}
+}
+@media all and (max-width: 1060px) {
+    .background-img {margin-left: -80px;}
+    .projects-img {width: 300px; height: 207px;}
+    .contact-form {margin-left: 8%; width: 70%;}
+}
+@media all and (max-width: 991px) {
+    .background-img {width: 100vw; margin-left: 0;}
+    .plant{width: 100%; padding-bottom: 50px; margin-top: -50px;}
+    .nav-content {width: 100%; padding-top: 15px;}
+    .content {margin-top: 0px; height: 100vh;}
+    .content-rows {padding-top: 30px;}
+    .nav-list li {display: inline-block; width: 24%;}
+    .nav-content {position: relative;}
+    .name-subtitle {margin-top: 5px; margin-bottom: 15px;}
+    .projects1, .projects2 { width: 90%; margin-left: 5%;}
+    .projects2 { margin-top: 50px;}
+    .projects-img {width: 80%; margin-left: 10%; height: auto;}
+    .projects-content{width: 90%; margin-left: 0%;}
+    .about-title, .projects-title, .resume-title, .contact-title {margin-left: 5%;}
+    .resume-content, .contact-content, .about-content {margin-left: 0%;}
+    .about-info, .resume-info, .contact-info{width: 80%; margin-left: 10%;}
+    .contact-form {margin-left: 15%; padding-bottom: 0px;}
+    #bwog, #tugalleton, #filler, #cookingcalc { width: 60%; margin-left: 18%;}
+}
+@media all and (max-width: 870px) {
+    .projects-img {width: 100%; margin-left: 0%;}
+    .icon, .icon-hover {width: 80%;}
+    #bwog, #tugalleton, #filler, #cookingcalc { width: 70%; margin-left: 13%;}
+}
+@media all and (max-width: 690px) {
+    .icon-hover {font-size: 13px;}
+    .long {font-size: 11px;}
+}
+@media all and (max-width: 600px) {
+    .name-title {font-size: 42px; letter-spacing: 2px; line-height: 45px;}
+    .name-subtitle {font-size: 14px;}
+    .li1, .li2, .li3, .li4 {font-size: 17px; margin-top: 0px;}
+    .about-title, .projects-title, .resume-title, .contact-title {font-size: 22px; margin-left: 3%; font-weight: 500;}
+    .about-info, .resume-info, .contact-info{width: 90%; margin-left: 5%;}
+    .projects1, .projects2 { width: 100%; margin-left: 0%;}
+    .projects2 { margin-top: 30px;}
+    #bwog, #tugalleton, #filler, #cookingcalc { width: 76%; margin-left: 9%;}
+    .carousel-control-prev-icon {width: 1em; height: 1em; margin-left: -110px;}  
+    .carousel-control-next-icon {width: 1em; height: 1em; margin-right: -110px;}
+    .p-title {font-size: 20px;}
+    .p-description {font-size: 15px; line-height: 25px;}
+    .bi-link-45deg {width: 1.3em; height: 1.3em; margin-top: 15px;}
+    .about-info, .resume-info, .contact-info{margin-top: 15px; font-size: 15px; line-height: 25px;}
+    #fmsg, #fsubject, #fname, #femail, .contact-form label{font-size: 15px;}
+}
+@media all and (max-width: 575px) {
+    .col-2 .icon, .col-2 .icon-hover {width: 100%;}
+    .col-2 {margin-right: 5%; margin-bottom: 10px;}
+}
+@media all and (max-width: 500px) {
+    .carousel-control-prev-icon, .carousel-control-next-icon {display: none;}
+    .contact-form {margin-left: 10%; width: 80%;}
+    .about-title, .projects-title, .resume-title, .contact-title {margin-left: 2%;}
+    #bwog, #tugalleton, #filler, #cookingcalc { width: 80%; margin-left: 7%;}
+    .col-2 .icon, .col-2 .icon-hover {width: 110%;}
+    .col-2 {margin-right: 7%;}
+}
+@media all and (max-width: 400px) {
+    .nav-col {padding-left: 0; padding-right: 0;}
+    .contact-form {margin-left: 5%; width: 90%;}
+    .about-title, .projects-title, .resume-title, .contact-title {margin-left: 1%;}
+    #bwog, #tugalleton, #filler, #cookingcalc { width: 85%; margin-left: 3.7%;}
+    .col-2 .icon, .col-2 .icon-hover {width: 115%;}
+    .col-2 {margin-right: 12%;}
+    #bwog .col-2 {margin-right: 7%;}
+    .project-rows{ width: 105%; margin-left: -2.5%;}
+    .project-rows .col-6{ padding-left: 2%; padding-right: 2%;}
+    .resume-content, .contact-content {padding-top: 30px;}
+    .projects-content {padding-bottom: 60px;}
+    .nav-list {margin-bottom: 0;}
+    .sticky {padding-top: 6px; }
+    .li1, .li2, .li3, .li4 { margin-bottom: 6px; }
+}
+@media all and (max-width: 382px) {
+    .name-title {font-size: 38px;}
+    .name-subtitle {font-size: 12px;}
+    .li1, .li2, .li3, .li4 {font-size: 15px;}
+    .about-title, .projects-title, .resume-title, .contact-title {font-size: 20px;}
+    .projects1 { margin-top: 15px;}
+    #bwog, #tugalleton, #filler, #cookingcalc {top: 40px;}
+}
+@media all and (max-width: 335px) {
+    .name-title {font-size: 36px;}
+    .name-subtitle {font-size: 11px;}
+    .li1, .li2, .li3, .li4 {font-size: 14px;}
+    .p-title {font-size: 18px;}
+    .p-description {font-size: 13px; line-height: 23px;}
+    .about-info, .resume-info, .contact-info{font-size: 13px; line-height: 23px;}
+    #fmsg, #fsubject, #fname, #femail, .contact-form label{font-size: 13px;}
+}
+

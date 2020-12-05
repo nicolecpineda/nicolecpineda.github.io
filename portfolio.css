@@ -62,9 +62,10 @@ body {
     position: fixed;
     top: 0;
     left: 0;
-    width: 100vw;
+    width: 100%;
+    z-index: 20;
     padding-top: 12px;
-    background-color: rgba(68, 68, 68, 0.2)
+    background-color: rgba(68, 68, 68, 0.2);
 }
 
 .li1, .li2, .li3, .li4 {
@@ -387,11 +388,10 @@ body {
 @media all and (max-width: 991px) {
     .background-img {width: 100vw; margin-left: 0;}
     .plant{width: 100%; padding-bottom: 50px; margin-top: -50px;}
-    .nav-content {width: 100%; padding-top: 15px;}
+    .nav-content {width: 100%; padding-top: 15px; position: initial;}
     .content {margin-top: 0px; height: 100vh;}
     .content-rows {padding-top: 30px;}
     .nav-list li {display: inline-block; width: 24%;}
-    .nav-content {position: relative;}
     .name-subtitle {margin-top: 5px; margin-bottom: 15px;}
     .projects1, .projects2 { width: 90%; margin-left: 5%;}
     .projects2 { margin-top: 50px;}

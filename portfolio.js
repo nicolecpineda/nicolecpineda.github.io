@@ -11,6 +11,7 @@ function handleResize() {
             p = true
         }
 
+        document.body.height = window.innerHeight;
         $('.name-title').empty();
         $('.name-title').append('Nicole Pineda');
 

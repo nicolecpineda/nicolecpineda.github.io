@@ -389,7 +389,7 @@ body {
     .background-img {width: 100vw; height: 100vh; margin-left: 0; top: 0 !important;}
     .plant{width: 100%; padding-bottom: 50px; margin-top: -50px;}
     .nav-content {width: 100%; padding-top: 15px; position: initial;}
-    .content {margin-top: 0px; height: 100%;}
+    .content {margin-top: 0px !important; height: 100%;}
     .content-rows {padding-top: 30px;}
     .nav-list li {display: inline-block; width: 24%;}
     .name-subtitle {margin-top: 5px; margin-bottom: 15px;}

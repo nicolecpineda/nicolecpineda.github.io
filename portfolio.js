@@ -18,7 +18,7 @@ function handleResize() {
         $('.content').on('scroll', function(){
             if ($('.content').scrollTop()>=108 && !$('.nav-list').hasClass('sticky') && $('.name-title').html() === 'Nicole Pineda') {
                 $('.nav-list').addClass('sticky');
-                $('.content-rows').css("padding-top", "40px");
+                $('.content-rows').css("padding-top", "70px");
                 if($(window).width() < 401)
                     $('.content').css("margin-top", "40px");
                 else

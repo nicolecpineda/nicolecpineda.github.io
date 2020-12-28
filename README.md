@@ -1,2 +1,2 @@
 # Portfolio
-Personal website to showcase projects
+Personal [website](https://nicolecpineda.github.io/) to showcase projects

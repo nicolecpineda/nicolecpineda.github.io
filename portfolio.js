@@ -53,7 +53,7 @@ function handleResize() {
             p = false;
         }
 
-        if($(window).width() >= 1800 || ($(window).height() >= 1100 && $(window).width() >= 1200 && $(window).width()< 1500)) {
+        if($(window).width() >= 1800 || ($(window).height() >= 1100 && $(window).width() >= 1200 && $(window).width()< 1800)) {
             $('.background-img').attr('src', 'images/background2.jpeg');
         } else {
             $('.background-img').attr('src', 'images/background3.jpeg');
